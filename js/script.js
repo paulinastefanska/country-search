@@ -16,10 +16,30 @@ function searchCountries() {
 }
 
 function showCountriesList(resp) {
-  countriesList.innerHTML = '';
-  resp.forEach(function(item){
-    var liEl = document.createElement('li');
-    liEl.innerText = item.name;
-    countriesList.appendChild(liEl);
-  });
+	countriesList.innerHTML = '';
+	resp.forEach(function(country){
+    	generateInfo(country);
+	});
+}
+
+function generateInfo(country) {
+  var template = document.getElementById("country-template").innerHTML;
+
+  var data = {
+    flag: country.flag,
+    name: country.name,
+    capital: country.capital,
+    currenciesCode: country.currencies[0].code,
+    currenciesName: country.currencies[0].name,
+    currenciesSymbol: country.currencies[0].symbol,
+    area: country.area,
+    population: country.population,
+    region: country.region,
+  };
+
+	Mustache.parse(template);
+  	countriesList.insertAdjacentHTML(
+    "beforeend",
+    Mustache.render(template, data)
+  );
 }
