@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 
-body { text-align: center; font-family: 'Open Sans', sans-serif; }
+body { text-align: center; font-family: 'Open Sans', sans-serif; color: #222f3e; }
 
 .container { max-width: 700px; margin: 0 auto; }
 
@@ -20,7 +20,7 @@ body { text-align: center; font-family: 'Open Sans', sans-serif; }
 
 .country-header-name { font-size: 35px; padding-left: 20px; }
 
-.country-body-title { width: 160px; text-align: left; padding: 8px; }
+.country-body-title { width: 160px; text-align: left; padding: 6px; }
 
 .country-body-description { text-align: left; }
 
