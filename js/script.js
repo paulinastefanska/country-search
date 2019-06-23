@@ -28,11 +28,12 @@ function searchCountries() {
 function showCountriesList(resp) {
 	countriesList.innerHTML = '';
 	resp.forEach(function(country){
-    	generateInfo(country);
+    	generateTemplate(country);
 	});
 }
 
-function generateInfo(country) {
+// Generate mustache templates and fill them with fetched data
+function generateTemplate(country) {
   var template = document.getElementById("country-template").innerHTML;
 
   var data = {
