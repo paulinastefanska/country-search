@@ -10,46 +10,46 @@
 	</head>
 	<body>
 		<h1>Country search engine</h1>
-		<button id="search">Search a country</button>
-		<input id="country-name" type="text" />
-		<h2>List of countries</h2>
+		<input class="input" id="country-name" type="text"/>
+    <button class="btn-search" id="search">Search a country</button>
     <div class="container">
   		<ul class="countries" id="countries">
-  			<li>No data</li>
+  			<li></li>
   		</ul>
     </div>
 
 		<!-- Mustache template -->
     <script id="country-template" type="x-tmpl-mustache">
-      <div class="country">
-          <div class="country-header">
-            <div class="country-header-flag"><img src={{flag}} alt="country flag"></div>
-            <div class="country-header-name">{{name}}</div>
-          </div>
-          <div class="country-body">
-            <div class="country-body-header">Information:</div>
-            <div class="position-wrapper">
-              <div class="country-body-title">Capital:</div>
-              <div class="country-body-description">{{capital}}</div>
-            </div>
-            <div class="position-wrapper">
-              <div class="country-body-title">Currency:</div>
-              <div class="country-body-description">code: {{currenciesCode}}<br /> name: {{currenciesName}}<br /> symbol: {{currenciesSymbol}}</div>
-            </div>
-            <div class="position-wrapper">
-              <div class="country-body-title">Land area:</div>
-              <div class="country-body-description">{{area}} sq.km</div>
-            </div>
-            <div class="position-wrapper">
-              <div class="country-body-title">Population:</div>
-              <div class="country-body-description">{{population}} people</div>
-            </div>
-            <div class="position-wrapper">
-              <div class="country-body-title">Region:</div>
-              <div class="country-body-description">{{region}}</div>
-            </div>
-          </div>
-        </div>
+      <table class="country">
+        <tr class="country-header">
+          <th class="country-header-flag"><img src={{flag}} alt="country flag"></th>
+          <th class="country-header-name">{{name}}</th> 
+        </tr>
+        <tr class="position-wrapper">
+            <th class="country-body-title">Capital:</th>
+            <td class="country-body-description">{{capital}}</td>
+        </tr>
+        <tr class="position-wrapper">
+          <th class="country-body-title">Currency:</th>
+          <td class="country-body-description">code: {{currenciesCode}}<br/>name: {{currenciesName}}<br/>symbol: {{currenciesSymbol}}</td>
+        </tr>
+        <tr class="position-wrapper">
+          <th class="country-body-title">Land area:</th>
+          <td class="country-body-description">{{area}} sq.km</td>
+        </tr>
+        <tr class="position-wrapper">
+          <th class="country-body-title">Population:</th>
+          <td class="country-body-description">{{population}} people</td>
+        </tr>
+        <tr class="position-wrapper">
+          <th class="country-body-title">Region:</th>
+          <td class="country-body-description">{{region}}</td>
+        </tr>
+        <tr class="position-wrapper">
+            <th class="country-body-title">Subregion:</th>
+            <td class="country-body-description">{{subregion}}</td>
+        </tr>
+      </table>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
