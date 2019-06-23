@@ -1,6 +1,6 @@
 "use strict";
 
-var url = 'https://restcountries.eu/rest/v1/name/';
+var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
 
 // Event listener for search button
@@ -46,6 +46,7 @@ function generateTemplate(country) {
     area: country.area,
     population: country.population,
     region: country.region,
+    subregion: country.subregion
   };
 
 	Mustache.parse(template);
