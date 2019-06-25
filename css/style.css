@@ -12,7 +12,7 @@ body { text-align: center; font-family: 'Open Sans', sans-serif; color: #222f3e;
 
 .countries { list-style: none; padding: 0; }
 
-.country { width: 650px; margin: 20px auto; border: 1px solid #636e72; padding: 20px; border-radius: 12px; }
+.country { max-width: 650px; width: 100%; margin: 20px auto; border: 1px solid #636e72; padding: 20px; border-radius: 12px; }
 
 .country-header { display: block; margin-bottom: 15px; }
 
